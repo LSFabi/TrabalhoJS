@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css" class="stylesheet">
+    <title>Dever 1</title>
+</head>
+<body>
+    <main class="container">
+        <div class="row">
+            <div class="col-6 form-group">
+                <label for="boxtext1">Primeiro Input Text</label>
+                <input type="text" class="boxtext1" id="txtNUM1" onClick="ONSelect();" onblur="OFSelect();">
+                <span id="textoTXTNum1"></span>
+            </div>
+            <div class="col-6 form-group">
+                <label for="">Segunda caixa de texto</label>
+                <input type="text" name="" id="boxtext2">
+            </div>
+        </div>
+    </main>
+     <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+
+    <script src="js/popper.min.js"></script>
+
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        function ONSelect(){
+            var txt1, VALIDATXT1;
+            txt1 = document.getElementById("txtNUM1").value;
+            VALIDATXT1 = isNaN(txt1);
+            if(VALIDATXT1 == false && txt1 == ""){
+                alert ("Primeira Caixa Ativada");
+            } else document.getElementById("txtNUM1").value= ""; 
+
+        }
+
+        function OFSelect(){
+            var txt1;
+            txt1 = document.getElementById("textoTXTNum1").value;
+            if(txt1 ==""|| isNaN(txt1) == true){
+                document.getElementById("textoTXTNum1").textContent = "Perdeu o foco";
+                document.getElementById("textoTXTNum1").focus = "Perdeu o Foco";
+            } else  document.getElementById("textoTXTNum1").textContent = "";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.coluna{
+    background-color:beige;
+    border: 1px solid #ccc;
+    height: 30px;
+    
+}
+
+.linha{
+    height: 100px;
+    background-color: chartreuse;
+}
+
+.image{
+    height:400px;
+    width:300px;
+}
